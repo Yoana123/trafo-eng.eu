@@ -1,0 +1,51 @@
+module.exports = {
+  content: ['./src/pages/**/*.{ts,tsx}', './src/components/**/*.{ts,tsx}'],
+  theme: {
+    fontFamily: {
+      sans: [
+        'Nunito',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'Noto Sans',
+        'sans-serif',
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'Noto Color Emoji',
+      ],
+      heading: [
+        'Open Sans',
+        'Nunito',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'Noto Sans',
+        'sans-serif',
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'Noto Color Emoji',
+      ],
+    },
+    extend: {
+      fontSize: {
+        '1px': '1px',
+      },
+      gridTemplateColumns: {
+        service: '2fr 1fr',
+      },
+    },
+  },
+  plugins: [],
+}

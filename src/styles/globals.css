@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** =========================================== **/
+/** OVERLAY                                     **/
+/** =========================================== **/
+
+.overlay-container {
+  @apply fixed top-0 left-0 z-40 w-full h-full bg-gray-800 bg-opacity-50 pointer-events-none invisible duration-150;
+  transition-property: visibility;
+}
+
+.overlay-container.closed {
+  @apply invisible;
+}
+
+.overlay-container.opened {
+  @apply visible;
+}
+
+.overlay {
+  @apply w-1/2 fixed top-0 right-0 h-full z-50 bg-white pointer-events-auto duration-300;
+  transition-property: transform, visibility;
+}
+
+.overlay.opened {
+  @apply visible translate-x-0;
+}
+
+.overlay.closed {
+  @apply invisible translate-x-full;
+}
+
+/** =========================================== **/
+/** MODAL                                       **/
+/** =========================================== **/
+
+.modal {
+  @apply fixed z-10 inset-0 overflow-y-auto transition-all;
+}
+
+.modal.closed {
+  @apply invisible opacity-0;
+}
+
+.modal.opened {
+  @apply visible opacity-100;
+}
+
+/** =========================================== **/
+/** PRODUCT TABLES                              **/
+/** =========================================== **/
+
+.product-table-cols-11,
+.product-table-cols-13 {
+  display: grid;
+  min-width: 800px;
+  max-width: 1200px;
+}
+.product-table-cols-11 {
+  grid-template-columns: minmax(150px, 3.3fr) repeat(10, minmax(50px, 1fr));
+}
+
+.product-table-cols-13 {
+  grid-template-columns: minmax(150px, 3.3fr) repeat(12, minmax(50px, 1fr));
+}
+
+.section-background {
+  background-image: radial-gradient(circle, #e7cdad 0%, #8fbddd 100%);
+  background-image: -webkit-radial-gradient(circle, #e7cdad 0%, #8fbddd 100%);
+  filter: blur(120px);
+}
+
+/** =========================================== **/
+/** CONTACT FORM                                **/
+/** =========================================== **/
+
+.input-field {
+  @apply appearance-none mt-2 mb-6 block w-full bg-gray-50 text-gray-900 border rounded-lg py-3 px-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500;
+}
+
+.textarea-field {
+  @apply appearance-none h-20 mt-2 block w-full bg-gray-50 text-gray-800 border rounded-lg py-3 px-3 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-indigo-500;
+}

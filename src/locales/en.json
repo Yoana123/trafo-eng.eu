@@ -1,0 +1,64 @@
+{
+  "logo.alt": "Trafo Engeneering",
+  "skip.content": "Skip to content",
+
+  "navigation.title": "Menu",
+  "navigation.about": "About us",
+  "navigation.products": "Products",
+  "navigation.services": "Services",
+  "navigation.contacts": "Contacts",
+  "navigation.close": "Close",
+
+  "about.metadata.title": "About - Trafo Engineering",
+  "about.metadata.description": "Production and repairing services of oil distribution transformers with power from 25kVA to 1600kVA",
+  "about.title": "Trafo Engineering",
+  "about.description": "Production and repairing services of oil distribution transformers with power from 25kVA to 1600kVA",
+  "about.subtitle": "Who we are?",
+  "about.text": "For more than two decades, we have been making sure that our customer's electricity supply is reliable and secure. The transformers manufactured by Trafo Engineering Ltd. correspond to the world trends and meet the European standards. We are a reliable partner of our customers, offering engineering solutions and high quality products. At their request, modifications are made depending on the operating conditions, the number of phases, the connection group, etc. In recent years, our products are preferred because of the short production times and relatively low prices, both on the Bulgarian market and in some neighboring countries: Greece, Northern Macedonia, Romania, Kosovo and others.",
+  "products.title": "Products",
+
+  "services.title": "Services",
+  "contacts.title": "Contacts",
+
+  "products.metadata.title": "Products - Trafo Engineering",
+  "products.metadata.description": "Spares offered by Trafo Engineering are procured and checked as per standard quality norms set by us.",
+  "products.title": "Products",
+  "products.description": "Spares are procured and checked as per standard quality norms set by us. Spares are procured from approved sources minimum cycle time through planning, foresight, focus and thrust.",
+  "products.button.inquiry": "Make an inquiry",
+
+  "services.metadata.title": "Services - Trafo Engineering",
+  "services.metadata.description": "Archieve optimum use of your tranformer with a range of services backed by more than 20 years of reliability.",
+  "services.title": "Services",
+  "services.description": "Archieve optimum use of your tranformer with a range of services backed by more than 20 years of reliability.",
+  "services.button.inquiry": "Make an inquiry",
+
+  "contacts.metadata.title": "Contacts - Trafo Engineering",
+  "contacts.metadata.description": "Production and repairing services of oil distribution transformers with power from 25kVA to 1600kVA",
+  "contacts.title": "Contacts",
+  "contacts.description": "You can reach us on phone numbers, email address or through our contact form.",
+  "contacts.address": "Address",
+  "contacts.error.required": "This field is required",
+  "contacts.error.email": "Please enter a valid email address.",
+
+  "contacts.submission.success.title": "Thank you for contacting us!",
+  "contacts.submission.success.message": "Message has been sent successfully.",
+  "contacts.submission.error.title": "Sorry for the inconvenience!",
+  "contacts.submission.error.message": "There was an error sending your message. Please try again later.",
+
+  "contacts.field.name": "Name",
+  "contacts.field.company": "Company",
+  "contacts.field.phone": "Phone",
+  "contacts.field.email": "Email",
+  "contacts.field.subject": "Subject",
+  "contacts.field.message": "Message",
+  "contacts.field.required": " *",
+  "contacts.button.submit": "Submit",
+
+  "contacts.callto1": "+359886538693",
+  "contacts.callto2": "+359888525719",
+  "contacts.mailto1": "trafo_eng@abv.bg",
+
+  "footer.copyright": "Trafo Engeneering Inc.",
+
+  "modal.button.ok": "OK"
+}
