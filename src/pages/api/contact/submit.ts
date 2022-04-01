@@ -39,7 +39,7 @@ export default async function handler(
     !message.trim()
   ) {
     return res
-      .status(403)
+      .status(400)
       .json({ status: 'error', message: 'You performed a malformed request.' })
   }
 
@@ -48,37 +48,27 @@ export default async function handler(
   const transport = createTransport({
     port: 25,
     host: process.env.SMTP_HOSTNAME,
-    secure: true,
+    // secure: true,
     auth: {
       user: process.env.SMTP_USERNAME,
       pass: process.env.SMTP_PASSWORD,
     },
   })
 
-  transport.sendMail(
-    {
+  try {
+    await transport.sendMail({
       to: process.env.EMAIL_ADDRESS,
       from: process.env.EMAIL_ADDRESS,
       replyTo: email,
       subject: `Inquiry: ${subject}`,
       text: emailBody,
       html: emailBody.replace(/\r\n/g, '<br />'),
-    },
-    (err, info) => {
-      transport.close()
+    })
+  } catch (error: any) {
+    return res
+      .status(503)
+      .json({ status: 'error', message: error.message || error.toString() })
+  }
 
-      if (err) {
-        return res.status(500).json({ status: 'error', message: err.message })
-      } else {
-        return res
-          .status(200)
-          .json({ status: 'success', message: info.response })
-      }
-    }
-  )
-
-  return res.status(200).json({
-    status: 'success',
-    message: 'Email message has been sent successful.',
-  })
+  return res.status(200).json({ status: 'success', message: '' })
 }

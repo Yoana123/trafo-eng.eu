@@ -4,7 +4,12 @@ function Document() {
   return (
     <Html>
       <Head>
-        <link rel="shortcut icon" href="/icons/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link
+          rel="sitemap"
+          type="application/xml"
+          href="/sitemap/sitemap-index.xml"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://googletagmanager.com" />
         <link

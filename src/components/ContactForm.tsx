@@ -17,10 +17,14 @@ function ContactForm(): React.ReactElement {
   const [subject, setSubject] = React.useState<string>('')
   const [message, setMessage] = React.useState<string>('')
   const [formError, setFormError] = React.useState<Record<string, string>>()
+  const [submitIsDisabled, setSubmitIsDisabled] = React.useState<boolean>(false)
 
-  const handleFormSubmit = (e: React.FormEvent): void => {
+  const handleFormSubmit = async (e: React.FormEvent): Promise<void> => {
     // stop form from submit
     e.preventDefault()
+
+    // disable submit button to prevent multiple submissions
+    setSubmitIsDisabled(true)
 
     const errors: Record<string, string> = {}
 
@@ -53,11 +57,15 @@ function ContactForm(): React.ReactElement {
 
     if (Object.keys(errors).length !== 0) {
       setFormError(errors)
+      setSubmitIsDisabled(false)
       return
     }
 
-    fetch('/api/contact/submit', {
+    await fetch('/api/contact/submit', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         name,
         company,
@@ -87,11 +95,28 @@ function ContactForm(): React.ReactElement {
             ),
             type: 'success',
             message: t(
-              'contacts.success.message',
+              'contacts.submission.success.message',
               'Message has been sent successfully.'
             ),
           })
         }
+
+        if (data.status === 400 || data.status === 503) {
+          setModal({
+            active: true,
+            title: t(
+              'contacts.submission.error.title',
+              'Sorry for the inconvenience!'
+            ),
+            type: 'error',
+            message: t(
+              'contacts.submission.error.message',
+              'There was an error sending your message. Please try again later.'
+            ),
+          })
+        }
+
+        setSubmitIsDisabled(false)
       })
       .catch((e: Error) => {
         // form submission error
@@ -104,12 +129,10 @@ function ContactForm(): React.ReactElement {
             'Sorry for the inconvenience!'
           ),
           type: 'error',
-          message:
-            t(
-              'contacts.submission.error.message',
-              'There was an error sending your message. Please try again later.'
-            ) || e.message,
+          message: e.message,
         })
+
+        setSubmitIsDisabled(false)
       })
   }
 
@@ -236,6 +259,7 @@ function ContactForm(): React.ReactElement {
             </div>
             <div className="mt-8 md:mt-4 col-span-2 text-right">
               <button
+                disabled={submitIsDisabled}
                 formNoValidate={false}
                 className="px-6 py-3 text-white text-sm font-semibold leading-5 w-full md:w-auto bg-indigo-700 border-gray-400 rounded-md shadow-sm transition duration-200 hover:bg-indigo-600 hover:shadow focus:bg-indigo-800 focus:shadow-none"
               >
