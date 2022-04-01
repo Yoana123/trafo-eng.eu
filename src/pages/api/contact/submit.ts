@@ -48,7 +48,7 @@ export default async function handler(
   const transport = createTransport({
     port: 25,
     host: process.env.SMTP_HOSTNAME,
-    // secure: true,
+    secure: true,
     auth: {
       user: process.env.SMTP_USERNAME,
       pass: process.env.SMTP_PASSWORD,
