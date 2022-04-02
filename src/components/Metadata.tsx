@@ -30,7 +30,7 @@ export default function Metadata({
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
       />
 
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
       <meta
         key="apple-mobile-web-app-capable"

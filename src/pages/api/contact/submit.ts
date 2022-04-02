@@ -64,10 +64,10 @@ export default async function handler(
       text: emailBody,
       html: emailBody.replace(/\r\n/g, '<br />'),
     })
-  } catch (error: any) {
+  } catch (error: unknown) {
     return res
       .status(503)
-      .json({ status: 'error', message: error.message || error.toString() })
+      .json({ status: 'error', message: 'Unable to send message.' })
   }
 
   return res.status(200).json({ status: 'success', message: '' })
