@@ -12,7 +12,7 @@ export default function useOnClickAway(
             ref.current instanceof HTMLElement && ref.current.contains(target)
         )
 
-        if (!isOneRefClicked && onClickAway) {
+        if (isOneRefClicked && onClickAway) {
           onClickAway()
         }
       }
