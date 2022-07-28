@@ -15,10 +15,6 @@
   "about.description": "Production and repairing services of oil distribution transformers with power from 25kVA to 1600kVA",
   "about.subtitle": "Who we are?",
   "about.text": "For more than two decades, we have been making sure that our customer's electricity supply is reliable and secure. The transformers manufactured by Trafo Engineering Ltd. correspond to the world trends and meet the European standards. We are a reliable partner of our customers, offering engineering solutions and high quality products. At their request, modifications are made depending on the operating conditions, the number of phases, the connection group, etc. In recent years, our products are preferred because of the short production times and relatively low prices, both on the Bulgarian market and in some neighboring countries: Greece, Northern Macedonia, Romania, Kosovo and others.",
-  "products.title": "Products",
-
-  "services.title": "Services",
-  "contacts.title": "Contacts",
 
   "products.metadata.title": "Products - Trafo Engineering",
   "products.metadata.description": "Spares offered by Trafo Engineering are procured and checked as per standard quality norms set by us.",
@@ -60,5 +56,6 @@
 
   "footer.copyright": "Trafo Engeneering Inc.",
 
-  "modal.button.ok": "OK"
+  "modal.button.ok": "OK",
+  "meta.keywords": "тrafo еngineering, transformers, transformers production, repairing transformers, recoiling transformers, transformers parts, recycling tranformer oil"
 }

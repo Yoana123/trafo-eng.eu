@@ -33,7 +33,7 @@ export default function MenuMobile(): React.ReactElement {
               <MenuMobileCloseButton />
             </div>
             <div className="ml-2">
-              <Logo width={22} height={36} />
+              <Logo width={65} height={40} />
             </div>
             <div className="mt-6">
               <MenuMobileLinks />

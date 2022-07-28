@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import useTranslation from '../hooks/useTranslation'
 
 export interface Metadata {
   title: string
@@ -15,6 +16,7 @@ export default function Metadata({
   metadata: Metadata
   noindex?: boolean
 }): React.ReactElement {
+  const { t } = useTranslation()
   const { pathname } = useRouter()
   const { title, description, image } = metadata
 
@@ -24,6 +26,7 @@ export default function Metadata({
 
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={t('meta.keywords', '')}></meta>
 
       <meta
         name="viewport"
