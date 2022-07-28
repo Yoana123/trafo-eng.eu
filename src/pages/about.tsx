@@ -17,14 +17,15 @@ function About(): React.ReactElement {
       />
       <section className="relative max-w-screen-xl w-full mx-auto mt-8 md:mt-12 px-5 md:px-8 lg:px-16">
         <div className="relative rounded-lg overflow-hidden h-[15rem] md:h-[20rem] lg:h-[25rem]">
-          <div className="absolute top-0 left-0 w-full h-full bg-indigo-900 bg-opacity-40 z-10"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#acb4e5] to-[#a4aadc] z-10"></div>
           <Image
             className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full z-10"
-            src="/images/about/about.png"
+            src="/images/about/about.jpg"
             layout="fill"
             objectFit="contain"
             objectPosition="center"
             alt={t('about.title', '')}
+            priority={false}
           />
           <div className="absolute w-full h-full top-0 left=0 z-30">
             <div className="max-w-3xl mx-auto">
