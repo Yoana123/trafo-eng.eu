@@ -4,6 +4,7 @@ import { Hamburger } from './Icons'
 
 interface NavbarMobileMenuButtonProps {
   onClick: () => void
+  children: React.ReactNode
 }
 
 const NavbarMobileMenuButton: React.FC<NavbarMobileMenuButtonProps> = ({
